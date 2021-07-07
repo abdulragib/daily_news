@@ -34,3 +34,4 @@ Future getNews() async {
 }
 
 //https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.aajtak.in%2Frssfeeds%2F%3Fid%3Dhome hindi news
+//    <uses-permission android:name="android.permission.INTERNET"/> give this permission in android manifest.

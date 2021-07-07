@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'NewsPage.dart';
 import "main.dart";
 
-
-
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();

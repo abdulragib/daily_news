@@ -10,6 +10,7 @@ class NewsPage extends StatefulWidget {
 }
 
 class _NewsPageState extends State<NewsPage> {
+   
   _NewsPageState(int index);
 
   @override
@@ -24,22 +25,21 @@ class _NewsPageState extends State<NewsPage> {
         ),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(  
-        child: Column( 
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-           
             SizedBox(
-               height: 10,
-             ),
-
+              height: 10,
+            ),
             Container(
-               padding: EdgeInsets.only(left: 5, right: 5),
-             child: Text("News: ${item[widget.index]['content']}",
-               style: TextStyle(
-                 fontSize: 17,
-                 fontWeight: FontWeight.w500,
-                 fontFamily: 'Verdana',
-               ),
+              padding: EdgeInsets.only(left: 5, right: 5),
+              child: Text(
+                "News: ${item[widget.index]['content']}",
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: 'Verdana',
+                ),
               ),
             ),
           ],
