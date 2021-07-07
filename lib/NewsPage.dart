@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import "main.dart";
 
-class NewsPage extends StatelessWidget {
+class NewsPage extends StatefulWidget {
   int index;
   NewsPage(this.index, {value});
 
-  hello() {
-    NetworkImage('${item[index]['urlToImage']}');
-  }
+  @override
+  _NewsPageState createState() => _NewsPageState(index);
+}
+
+class _NewsPageState extends State<NewsPage> {
+  _NewsPageState(int index);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +18,7 @@ class NewsPage extends StatelessWidget {
       backgroundColor: Colors.white70,
       appBar: AppBar(
         title: new Text(
-          "News No : ${index + 1}",
+          "News No : ${widget.index + 1}",
           style: new TextStyle(
               fontSize: 20, color: Colors.white, fontWeight: FontWeight.w500),
         ),
@@ -31,7 +34,7 @@ class NewsPage extends StatelessWidget {
 
             Container(
                padding: EdgeInsets.only(left: 5, right: 5),
-             child: Text("News: ${item[index]['content']}",
+             child: Text("News: ${item[widget.index]['content']}",
                style: TextStyle(
                  fontSize: 17,
                  fontWeight: FontWeight.w500,
